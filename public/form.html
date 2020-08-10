@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+    <form action="/email_post" method="post">
+        <input type="text" name="email">
+        <button type="submit">제출</button>
+    </form>
+
+    <button class="ajaxsend">ajax-send</button>
+
+    <div class="result"></div>
+
+    <script>
+        document.querySelector('.ajaxsend').addEventListener('click', function() {
+            let inputData = document.forms[0].elements[0].value;
+            sendAjax('http://127.0.0.1:3000/ajax_send_email', inputData);
+        })
+
+        function sendAjax(url, data) {
+            let sendData = {'email': data};
+            let finalData = JSON.stringify(sendData);
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.open('POST', url);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(finalData)
+
+            xhr.addEventListener('load', function() {
+                let result = JSON.parse(xhr.responseText);
+                document.querySelector(".result").innerHTML = result.email;
+            });
+        }
+    </script>
+</body>
+</html>
