@@ -1,7 +1,6 @@
 let express = require('express');
 let bodyParser = require('body-parser');
-let main = require('./router/main');
-let email = require('./router/email');
+let router = require('./router/index');
 
 let app = express();
 
@@ -15,6 +14,5 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/', main);
-app.use('/email', email);
+app.use(router);
 

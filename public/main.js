@@ -1,1 +1,1 @@
-alert('main.js loaded')
+alert('index.js loaded')
