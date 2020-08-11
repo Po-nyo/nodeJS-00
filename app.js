@@ -1,43 +1,36 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mysql = require('mysql')
+let express = require('express');
+let bodyParser = require('body-parser');
+let mysql = require('mysql');
+let main = require('./router/main');
+let form = require('./router/form');
+let email_post = require('./router/email_post');
 
 // database connection
-const connection = mysql.createConnection({
+let connection = mysql.createConnection({
     host: 'localhost',
     user: 'test',
     password: 'test',
     database: 'test_db'
-})
+});
 
-connection.connect()
+connection.connect();
 
 
 let app = express();
-
-app.use(express.static('public'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.set('view engine', 'ejs')
 
 app.listen(3000, function() {
     console.log("server started at port 3000!");
 });
 
-app.get('/', function(req, res) {
-    res.sendFile(__dirname + "/public/main.html");
-})
+app.set('view engine', 'ejs');
 
-app.get('/form', function(req, res) {
-    res.sendFile(__dirname + "/public/form.html");
-})
+app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
-app.post('/email_post', function(req, res) {
-    res.render('email.ejs', {
-        'email': req.body.email,
-    })
-});
-
+app.use('/', main);
+app.use('/form', form);
+app.use('/email_post', email_post);
 
 app.post('/ajax_send_email', function(req, res) {
     const email = req.body.email;
