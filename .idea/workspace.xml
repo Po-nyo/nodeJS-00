@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="37dbb063-121c-4cbf-a265-e29e034be227" name="Default Changelist" comment="" />
+    <list default="true" id="37dbb063-121c-4cbf-a265-e29e034be227" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/form.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +40,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1fuwovTyiPclvk7KsT9wIlKBD5b" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,13 +79,38 @@
       <option name="presentableId" value="Default" />
       <updated>1597081463924</updated>
       <workItem from="1597081464989" duration="4770000" />
+      <workItem from="1597086251076" duration="158000" />
+      <workItem from="1597129007852" duration="3326000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="connect to mysql, query to mysql" />
+    <option name="LAST_COMMIT_MESSAGE" value="connect to mysql, query to mysql" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="448" y="238" key="Github.ShareDialog" timestamp="1597086364051">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="448" y="238" key="Github.ShareDialog/0.0.1280.680/1169.-1050.1680.1010@0.0.1280.680" timestamp="1597086364051" />
+    <state x="448" y="38" key="Github.UntrackedFilesDialog" timestamp="1597086386426">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="448" y="38" key="Github.UntrackedFilesDialog/0.0.1280.680/1169.-1050.1680.1010@0.0.1280.680" timestamp="1597086386426" />
     <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1597086238144">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

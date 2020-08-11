@@ -32,7 +32,11 @@
 
             xhr.addEventListener('load', function() {
                 let result = JSON.parse(xhr.responseText);
-                document.querySelector(".result").innerHTML = result.email;
+                let resultDiv = document.querySelector(".result");
+                if(result.result !== 'ok')
+                    resultDiv.innerHTML = 'email not found';
+                else
+                    resultDiv.innerHTML = result.name;
             });
         }
     </script>

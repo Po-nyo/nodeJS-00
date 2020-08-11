@@ -1,7 +1,19 @@
-var express = require('express');
-var bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
+const mysql = require('mysql')
 
-var app = express();
+// database connection
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'test',
+    password: 'test',
+    database: 'test_db'
+})
+
+connection.connect()
+
+
+let app = express();
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
@@ -28,7 +40,23 @@ app.post('/email_post', function(req, res) {
 
 
 app.post('/ajax_send_email', function(req, res) {
-    console.log(req.body.email);
-    let responseData = {'result': 'ok', 'email': req.body.email}
-    res.json(responseData)
+    const email = req.body.email;
+    console.log(email);
+
+    let responseData = {}
+
+    connection.query('SELECT name FROM user WHERE email="' + email +'"', function(err, rows) {
+        if(err) throw err;
+        if(rows[0]) {
+            console.log(rows[0]);
+            responseData.result = 'ok';
+            responseData.name = rows[0].name;
+        }
+        else {
+            responseData.result = 'none';
+            responseData.name = '';
+            console.log('none: ' + rows[0]);
+        }
+        res.json(responseData)
+    })
 })
