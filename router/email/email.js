@@ -15,7 +15,7 @@ connection.connect();
 
 // ROUTER
 router.get('', function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/form.html"));
+    res.sendFile(path.join(__dirname, "../../public/form.html"));
 });
 
 router.post('/email_post', function(req, res) {
